@@ -7,15 +7,19 @@ import vn.hoidanit.laptopshop.domain.User;
 import vn.hoidanit.laptopshop.repository.UserRepository;
 
 @Service
-public class UserSevice {
+public class UserService {
     private final UserRepository userRepository;
 
-    public UserSevice(UserRepository userRepository) {
+    public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
     public List<User> getAllUsers() {
         return this.userRepository.findAll();
+    }
+
+    public User getUserById(long id) {
+        return this.userRepository.findById(id);
     }
 
     public List<User> getAllUserByEmail(String email) {

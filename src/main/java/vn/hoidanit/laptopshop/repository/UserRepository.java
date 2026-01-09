@@ -14,4 +14,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
     User save(User hoidanit);
 
     List<User> findByEmail(String email);
+
+    User findById(long id); // phải định nghĩ ra vì cái cung cấp sẵn có kiểu dữ liệu là Optional - có thể
+                            // trả ra null
 }
