@@ -15,6 +15,6 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     List<User> findByEmail(String email);
 
-    User findById(long id); // phải định nghĩ ra vì cái cung cấp sẵn có kiểu dữ liệu là Optional - có thể
+    User findById(long id); // phải định nghĩa ra vì cái cung cấp sẵn có kiểu dữ liệu là Optional - có thể
                             // trả ra null
 }
